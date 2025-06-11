@@ -84,20 +84,22 @@
 
     // Разширена база знания с животни и правила
     const knowledge = `
-      car(tesla).
-car(lada).
+      car(tesla,electric).
+car(porsche,electric).
+car(mercedes,benz).
+car(bmw,benz).
 
 % Правила
-is_electric(X) :- car(X).
+is_electric(X) :- car(X,electric).
 
-
+is_benz(X):- car(X,benz).
     `;
 
     session.consult(knowledge);
 
     const animalAnimations = {
-      tesla: '<img src="https://images.ecency.com/p/FUkUE5bzkAZT3HzV5tJDiU2ik81PCd4JCyhWnRcDN8XJsVFY3UNB8DCcF6FBnrG9mHUsoB7296D4omrF75j3S9mNdXjzd7j2xiKroEuvcf5umt9qDsRKoeDp3kBezDQscLbJuZaCqh8sgthRd5GukLgMiH16xWrcxhxh.png?format=match&mode=fit" class="animal-gif" alt="Лъв анимация" />',
-      elephant: '<img src="https://media.giphy.com/media/2v170e71aanfi/giphy.gif" class="animal-gif" alt="Слон анимация" />',
+     
+      porshe: '<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExenZvMnRmNzltZWY5NTZvOXB1cXhhcWR1YjFjcGlub2FtOWowbGx5cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/darAMUceRAs0w/giphy.gif" class="animal-gif" alt="Слон анимация" />',
       tiger: '<img src="https://media.giphy.com/media/fANhQpcPGr2hO/giphy.gif" class="animal-gif" alt="Тигър анимация" />',
       crocodile: '<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" class="animal-gif" alt="Крокодил анимация" />',
       kangaroo: '<img src="https://media.giphy.com/media/l0MYEw7nYdf6r62aI/giphy.gif" class="animal-gif" alt="Кенгуру анимация" />',
